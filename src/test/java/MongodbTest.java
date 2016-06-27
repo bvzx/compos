@@ -1,5 +1,6 @@
 import com.alibaba.fastjson.JSON;
 import io.bvzx.core.nosql.mongdb.domain.MatchComment;
+import io.bvzx.core.util.NosqlManager;
 import io.bvzx.web.domain.Carmen;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,8 +21,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @date 2016年06月22日 18:13
  * @Copyright (c) 2015-2020 by caitu99
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring.xml")
+/*@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "classpath:spring.xml")*/
 public class MongodbTest {
 
     @Autowired
@@ -72,6 +73,21 @@ public class MongodbTest {
         carmen.setModifyTime(System.currentTimeMillis()/1000);
         carmen.setServiceMethodId(1010);
         redisTemplate.opsForValue().set("carman:api:method:mapping:2", JSON.toJSONString(carmen));
+    }
+
+
+    @Test
+    public void nosqlMangerTest(){
+        NosqlManager nosqlManager=NosqlManager.createRedis();
+        NosqlManager nosqlManager1=NosqlManager.createMongoDB();
+        NosqlManager nosqlManager2=NosqlManager.createRedis();
+        NosqlManager nosqlManager3=NosqlManager.createRedis();
+        NosqlManager nosqlManager4=NosqlManager.createRedis();
+        NosqlManager nosqlManager5=NosqlManager.createRedis();
+        NosqlManager nosqlManager6=NosqlManager.createRedis();
+        NosqlManager nosqlManager7=NosqlManager.createRedis();
+        NosqlManager nosqlManager8=NosqlManager.createRedis();
+        System.out.println(nosqlManager.getNosqlManagerCount());
     }
 
 }
