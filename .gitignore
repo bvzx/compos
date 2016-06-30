@@ -16,3 +16,4 @@ hs_err_pid*
 .idea/
 nosql-demo.iml
 target/
+compos.iml
