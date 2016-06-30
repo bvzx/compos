@@ -4,13 +4,17 @@ import io.bvzx.core.util.NosqlManager;
 import io.bvzx.web.domain.Carmen;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.ReflectionUtils;
 
 /**
  * todo
@@ -21,8 +25,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @date 2016年06月22日 18:13
  * @Copyright (c) 2015-2020 by caitu99
  */
-/*@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring.xml")*/
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "classpath:spring.xml")
 public class MongodbTest {
 
     @Autowired
@@ -88,6 +92,14 @@ public class MongodbTest {
         NosqlManager nosqlManager7=NosqlManager.createRedis();
         NosqlManager nosqlManager8=NosqlManager.createRedis();
         System.out.println(nosqlManager.getNosqlManagerCount());
+    }
+
+    @Test
+    public void bwanwrapper(){
+        BeanWrapper beanWrapper=new BeanWrapperImpl(new Carmen());
+        BeanWrapper beanWrapper1=new BeanWrapperImpl(new Carmen());
+        Carmen carmen= (Carmen) beanWrapper.getWrappedInstance();
+        System.out.println(carmen.getApiId());
     }
 
 }

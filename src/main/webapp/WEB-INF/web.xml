@@ -3,12 +3,13 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
 
-    <display-name>caitu99.service</display-name>
+    <display-name>nosql-demo</display-name>
     <!-- spring -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath*:spring.xml</param-value>
     </context-param>
+
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
@@ -24,6 +25,10 @@
         </init-param>
         <init-param>
             <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceResponseEncoding</param-name>
             <param-value>true</param-value>
         </init-param>
     </filter>
