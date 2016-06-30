@@ -5,9 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>index</title>
+<title>my</title>
 </head>
 <body>
-first demo page
+my demo page
 </body>
 </html>
