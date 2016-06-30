@@ -131,4 +131,13 @@ public class Digests {
         this.charset = charset;
     }
 
+    public static void main(String[] args){
+        log(Digests.assign("MD5").encrypt("123456"));
+        log(Digests.assign("MD5").checkPassword("123456","2312312"));
+    }
+
+    public static void log(Object content){
+        System.out.println(content.toString());
+    }
+
 }

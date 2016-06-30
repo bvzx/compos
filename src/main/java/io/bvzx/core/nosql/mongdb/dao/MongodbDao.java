@@ -12,4 +12,8 @@ package io.bvzx.core.nosql.mongdb.dao;
 public interface MongodbDao {
 
 
+
+
+
+
 }

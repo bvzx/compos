@@ -22,11 +22,10 @@ public class NosqlManager {
 
     @Autowired private MongoTemplate mongoTemplate;
     @Autowired private RedisTemplate redisTemplate;
+
     private final static AtomicInteger count=new AtomicInteger(0);
 
     private int state;
-
-
 
     private NosqlManager(int state){
         this.state=state;

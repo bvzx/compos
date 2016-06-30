@@ -15,12 +15,10 @@ import org.springframework.stereotype.Component;
  * @Copyright (c) 2015-2020 by caitu99
  */
 @Component
-public class RedisOps {
+public class RedisOps implements RedisDao{
 
     @Autowired
     RedisTemplate redisTemplate;
-
-
 
 
 
