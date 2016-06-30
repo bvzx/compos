@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  *
  * @author wugaoda
  * @Description: (类职责详细描述, 可空)
- * @ClassName: MongdbOperater
+ * @ClassName: RedisOps
  * @date 2016年06月21日 09:13
  * @Copyright (c) 2015-2020 by caitu99
  */
