@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @Copyright (c) 2015-2020 by caitu99
  */
 @Component
-public class MongdbOps {
+public class MongodbOps implements MongodbDao {
 
     @Autowired
     MongoTemplate mongoTemplate;
