@@ -1,3 +1,3 @@
 # compos
 
-##personal learning path
+personal learning path
