@@ -1,4 +1,4 @@
-package io.bvzx.service.util;
+package io.bvzx.service.util.encrypt;
 
 import com.google.common.base.Strings;
 
@@ -29,6 +29,11 @@ public class Digests {
 
     private MessageDigest messageDigest;
 
+    private static class DigestHolder {
+        public static Digests MD5_DIGESTS = Digests.assign("MD5");
+        public static Digests SHA1_DIGESTS = Digests.assign("SHA1");
+    }
+
     private static boolean checkAlgorithmType(String algorithmParam) {
         if (algorithmParam.equalsIgnoreCase(DEFAULT_DIGEST_AES) ||
                 algorithmParam.equalsIgnoreCase(DEFAULT_DIGEST_MD5)) {
@@ -38,7 +43,6 @@ public class Digests {
     }
 
     /**
-     *
      * @param algorithmParam 算法类型
      * @return
      */
@@ -47,10 +51,17 @@ public class Digests {
         return assign(algorithmParam, DEFAULT_CHARSET);
     }
 
+    public static String MD5(String pwd) {
+        return DigestHolder.MD5_DIGESTS.encrypt(pwd);
+    }
+
+    public static String SHA1(String pwd) {
+        return DigestHolder.SHA1_DIGESTS.encrypt(pwd);
+    }
+
     /**
-     *
      * @param algorithmParam 算法类型
-     * @param charset 字符集
+     * @param charset        字符集
      * @return
      */
     public static Digests assign(String algorithmParam, String charset) {
@@ -59,9 +70,8 @@ public class Digests {
     }
 
     /**
-     *
      * @param algorithmParam 算法类型
-     * @param charset 字符集
+     * @param charset        字符集
      * @return
      */
     public static Digests assign(String algorithmParam, Charset charset) {
@@ -73,45 +83,45 @@ public class Digests {
     private Digests(String algorithmParam, Charset charset) {
         this.algorithmType = algorithmParam;
         this.charset = charset;
+        try {
+            this.messageDigest = MessageDigest.getInstance(algorithmType);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
     }
 
+
     /**
-     *
      * @param input 输入参数
      * @return
      */
     public String encrypt(String input) {
         checkAlgorithmType(this.algorithmType);
-        try {
-            if (Strings.isNullOrEmpty(input)) {
-                return "";
-            }
 
-            messageDigest = MessageDigest.getInstance(algorithmType);
-
-            byte[] password = input.getBytes(charset);
-            password = messageDigest.digest(password);
-
-            StringBuilder ret = new StringBuilder(password.length << 1);
-            for (int i = 0; i < password.length; i++) {
-                ret.append(Character.forDigit((password[i] >> 4) & 0xf, 16));
-                ret.append(Character.forDigit(password[i] & 0xf, 16));
-            }
-
-            return ret.toString();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
+        if (Strings.isNullOrEmpty(input)) {
+            throw new IllegalArgumentException("Input is not null or empty");
         }
-        return null;
+
+        byte[] password = input.getBytes(charset);
+        password = messageDigest.digest(password);
+
+        StringBuilder ret = new StringBuilder(password.length << 1);
+        for (int i = 0; i < password.length; i++) {
+            ret.append(Character.forDigit((password[i] >> 4) & 0xf, 16));
+            ret.append(Character.forDigit(password[i] & 0xf, 16));
+        }
+
+        return ret.toString();
     }
 
     /**
-     *检验密码
+     * 检验密码
+     *
      * @param clearKey 明文
      * @param password 加密密码
      * @return
      */
-    public boolean checkPassword(String clearKey, String password){
+    public boolean checkPassword(String clearKey, String password) {
         return encrypt(clearKey).equalsIgnoreCase(password);
     }
 

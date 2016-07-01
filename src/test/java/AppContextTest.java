@@ -1,3 +1,4 @@
+import base.SpringTest;
 import io.bvzx.service.AppContext;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,9 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * Created by 73992 on 2016/6/30.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring.xml")
-public class AppContextTest {
+public class AppContextTest extends SpringTest{
 
     @Autowired
     AppContext appContext;

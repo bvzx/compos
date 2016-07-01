@@ -1,6 +1,6 @@
 import com.alibaba.fastjson.JSON;
 import io.bvzx.service.mongdb.domain.MatchComment;
-import io.bvzx.service.core.util.NosqlManager;
+import io.bvzx.service.util.NosqlManager;
 import io.bvzx.service.web.domain.Carmen;
 import org.junit.Test;
 import org.junit.runner.RunWith;
