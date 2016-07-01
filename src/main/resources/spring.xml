@@ -16,7 +16,7 @@
     />
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-          p:location="properties/*.properties"
+          p:locations="classpath:properties/*.properties"
     />
 
     <import resource="spring/*.xml"/>

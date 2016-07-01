@@ -9,5 +9,15 @@
 </head>
 <body>
 my demo page
+
+${me.userName}<br>
+${me.age}<br>
+${me.city}<br>
+${me.hight}<br>
+${me.weight}<br>
+${me.province}<br>
+${me.look}<br>
+
+
 </body>
 </html>
