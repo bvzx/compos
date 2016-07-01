@@ -1,4 +1,4 @@
-package io.bvzx.service.core.util;
+package io.bvzx.service.util;
 
 import com.google.common.base.Strings;
 
@@ -129,15 +129,6 @@ public class Digests {
 
     public void setCharset(Charset charset) {
         this.charset = charset;
-    }
-
-    public static void main(String[] args){
-        log(Digests.assign("MD5").encrypt("123456"));
-        log(Digests.assign("MD5").checkPassword("123456","2312312"));
-    }
-
-    public static void log(Object content){
-        System.out.println(content.toString());
     }
 
 }

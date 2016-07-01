@@ -1,5 +1,6 @@
-package io.bvzx.service.core.nosql.redis.dao;
+package io.bvzx.service.redis.dao;
 
+import io.bvzx.service.redis.dao.RedisDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Component;
  * @Copyright (c) 2015-2020 by caitu99
  */
 @Component
-public class RedisOps implements RedisDao{
+public class RedisOps implements RedisDao {
 
     @Autowired
     RedisTemplate redisTemplate;
