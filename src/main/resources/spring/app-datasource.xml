@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <tx:annotation-driven proxy-target-class="true"/>
+
+
+    <bean id="dataSourceCommon" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"
+          p:maxIdle="${sql.minIdle}"
+          p:driverClassName="${sql.driver}"
+          p:url="${sql.url}"
+          p:username="${sql.username}"
+          p:password="${sql.password}"
+          p:maxWait="${sql.maxWait}"
+          p:initialSize="${sql.initialSize}"
+          p:maxActive="${sql.maxActive}"
+          p:minIdle="${sql.minIdle}"
+          p:defaultAutoCommit="${sql.defaultAutoCommit}"
+          p:timeBetweenEvictionRunsMillis="${sql.timeBetweenEvictionRunsMillis}"
+          p:minEvictableIdleTimeMillis="${sql.minEvictableIdleTimeMillis}"
+          p:removeAbandoned="${sql.removeAbandoned}"
+          p:removeAbandonedTimeout="${sql.removeAbandonedTimeout}"
+          p:logAbandoned="${sql.logAbandoned}"
+          p:testWhileIdle="${sql.testWhileIdle}"
+          p:testOnBorrow="${sql.testOnBorrow}"
+          p:testOnReturn="${sql.testOnReturn}"
+          p:validationQuery="${sql.validationQuery}"
+          p:proxyFilters-ref="${sql.maxWait}"
+    />
+
+    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
+          p:dataSource-ref="dataSourceCommon"
+          p:configLocation="classpath:mybatis/*.xml"
+          p:mapperLocations="mapper/*.xml"
+    />
+
+    <bean id="MapperAutoConfigure" class="org.mybatis.spring.mapper.MapperScannerConfigurer"
+          p:basePackage="io.bvzx.service.*.dao"
+          p:sqlSessionFactory-ref="sessionFactory"
+    />
+
+
+</beans>

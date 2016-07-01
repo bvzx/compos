@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mongo="http://www.springframework.org/schema/data/mongo"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/data/mongo
@@ -30,9 +31,8 @@
 
     <mongo:db-factory dbname="database" mongo-ref="mongo"/>
 
-    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-        <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
-    </bean>
-
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate"
+          c:mongoDbFactory-ref="mongoDbFactory"
+    />
 
 </beans>
