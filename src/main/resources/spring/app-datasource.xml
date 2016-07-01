@@ -10,7 +10,6 @@
 
     <tx:annotation-driven proxy-target-class="true"/>
 
-
     <bean id="dataSourceCommon" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"
           p:maxIdle="${sql.minIdle}"
           p:driverClassName="${sql.driver}"
