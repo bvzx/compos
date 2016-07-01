@@ -1,4 +1,4 @@
-package io.bvzx.core.nosql.redis.dao;
+package io.bvzx.service.core.nosql.redis.dao;
 
 /**
  * todo

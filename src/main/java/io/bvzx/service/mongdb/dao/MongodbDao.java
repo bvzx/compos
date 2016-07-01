@@ -1,4 +1,4 @@
-package io.bvzx.core.nosql.mongdb.dao;
+package io.bvzx.service.mongdb.dao;
 
 /**
  * todo

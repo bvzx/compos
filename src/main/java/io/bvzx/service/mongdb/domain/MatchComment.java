@@ -1,4 +1,4 @@
-package io.bvzx.core.nosql.mongdb.domain;
+package io.bvzx.service.mongdb.domain;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;

@@ -1,4 +1,4 @@
-package io.bvzx.core.util;
+package io.bvzx.service.core.util;
 
 import com.google.common.base.Strings;
 

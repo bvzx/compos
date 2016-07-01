@@ -1,20 +1,18 @@
 import com.alibaba.fastjson.JSON;
-import io.bvzx.core.nosql.mongdb.domain.MatchComment;
-import io.bvzx.core.util.NosqlManager;
-import io.bvzx.web.domain.Carmen;
+import io.bvzx.service.mongdb.domain.MatchComment;
+import io.bvzx.service.core.util.NosqlManager;
+import io.bvzx.service.web.domain.Carmen;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.ReflectionUtils;
 
 /**
  * todo

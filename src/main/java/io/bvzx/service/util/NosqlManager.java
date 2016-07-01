@@ -1,4 +1,4 @@
-package io.bvzx.core.util;
+package io.bvzx.service.core.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;

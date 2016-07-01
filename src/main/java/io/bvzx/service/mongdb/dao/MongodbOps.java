@@ -1,8 +1,7 @@
-package io.bvzx.core.nosql.redis.dao;
+package io.bvzx.service.mongdb.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,15 +9,15 @@ import org.springframework.stereotype.Component;
  *
  * @author wugaoda
  * @Description: (类职责详细描述, 可空)
- * @ClassName: RedisOps
+ * @ClassName: MongodbOps
  * @date 2016年06月21日 09:13
  * @Copyright (c) 2015-2020 by caitu99
  */
 @Component
-public class RedisOps implements RedisDao{
+public class MongodbOps implements MongodbDao {
 
     @Autowired
-    RedisTemplate redisTemplate;
+    MongoTemplate mongoTemplate;
 
 
 

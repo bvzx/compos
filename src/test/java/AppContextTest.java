@@ -1,4 +1,4 @@
-import io.bvzx.AppContext;
+import io.bvzx.service.AppContext;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

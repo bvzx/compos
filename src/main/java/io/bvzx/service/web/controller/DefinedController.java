@@ -1,4 +1,4 @@
-package io.bvzx.web.controller;
+package io.bvzx.service.web.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
