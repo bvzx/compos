@@ -1,7 +1,5 @@
 package io.bvzx.service.exception;
 
-import java.io.Serializable;
-
 /**
  * todo
  *
@@ -11,7 +9,7 @@ import java.io.Serializable;
  * @date 2016年07月01日 14:08
  * @Copyright (c) 2015-2020 by caitu99
  */
-public class AppException extends RuntimeException  {
+public class ApiException extends RuntimeException  {
 
     private static final long serialVersionUID = -3643000772356018114L;
 
@@ -20,14 +18,14 @@ public class AppException extends RuntimeException  {
     private String data;
 
 
-    public AppException(int code, String messge) {
+    public ApiException(int code, String messge) {
         super(messge);
         this.code = code;
         this.messge = messge;
         this.data="";
     }
 
-    public AppException(int code, String messge, String data) {
+    public ApiException(int code, String messge, String data) {
         super(messge);
         this.code = code;
         this.messge = messge;

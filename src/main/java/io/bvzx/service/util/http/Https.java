@@ -22,25 +22,25 @@ import java.util.concurrent.TimeUnit;
  *
  * @author wugaoda
  * @Description: (类职责详细描述, 可空)
- * @ClassName: HttpUtils
+ * @ClassName: Https
  * @date 2016年07月01日 14:53
  * @Copyright (c) 2015-2020 by caitu99
  */
-public class HttpUtils {
+public class Https {
 
 
     private static HttpClient httpClient = null;
 
-    private static HttpUtils httpUtils;
+    private static Https httpUtils;
 
     private static Object lock=new Object();
 
 
-    private static HttpUtils getInstance() {
+    private static Https getInstance() {
         if (httpUtils == null) {
             synchronized (lock){
                 if (httpUtils ==null){
-                    httpUtils = new HttpUtils();
+                    httpUtils = new Https();
                     HttpClientConnectionManager hcManager = new PoolingHttpClientConnectionManager(25000, TimeUnit.SECONDS);
                     RequestConfig requestConfig = RequestConfig.custom()
                             .setConnectionRequestTimeout(1200000)
@@ -105,8 +105,8 @@ public class HttpUtils {
 
 
     public static void main(String [] args) throws IOException {
-        Logs.log(HttpUtils.getInstance().doGet("http://www.baidu.com","utf-8"));
-        Logs.log(HttpUtils.getInstance().doGet("http://www.baidu.com","utf-8"));
+        Logs.log(Https.getInstance().doGet("http://www.baidu.com","utf-8"));
+        Logs.log(Https.getInstance().doGet("http://www.baidu.com","utf-8"));
     }
 
 }

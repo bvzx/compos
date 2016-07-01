@@ -1,4 +1,4 @@
-package io.bvzx.service.web.controller;
+package io.bvzx.service.web.controller.api;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
