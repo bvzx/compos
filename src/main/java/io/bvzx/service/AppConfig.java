@@ -15,9 +15,22 @@ import org.springframework.stereotype.Component;
 @Component
 public class AppConfig {
 
-    @Value("mongo.connectTimeout")
-    public String connectTimeout;
+    @Value("app.version")
+    public String appVersion;
 
+    @Value("env")
+    public int env;
 
+    @Value("is.dev.mode")
+    public boolean isDevMode;
+
+    @Value("is.test.mode")
+    public boolean isTestMode;
+
+    @Value("is.product.mode")
+    public boolean isPrdMode;
+
+    @Value("ssl.url")
+    public boolean sslUrl;
 
 }
