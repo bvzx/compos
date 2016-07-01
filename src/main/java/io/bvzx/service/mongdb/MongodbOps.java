@@ -1,4 +1,4 @@
-package io.bvzx.service.mongdb.dao;
+package io.bvzx.service.mongdb;
 
 import com.mongodb.CommandResult;
 import com.mongodb.WriteResult;
