@@ -6,10 +6,10 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="jedisConfig" class="redis.clients.jedis.JedisPoolConfig"
-          p:maxIdle="10" p:maxWaitMillis="1000"/>
+          p:maxIdle="${redis.maxIdle}" p:maxWaitMillis="${redis.maxWaitMillis.}"/>
 
     <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
-          p:hostName="192.168.25.184"  p:usePool="true"  p:poolConfig-ref="jedisConfig" p:port="12346"/>
+          p:hostName="${redis.hostName}"  p:usePool="${redis.usePool}"  p:poolConfig-ref="jedisConfig" p:port="${redis.port}"/>
 
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
       p:connectionFactory-ref="jedisConnectionFactory" >
