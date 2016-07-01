@@ -21,6 +21,4 @@
           p:locations="classpath:properties/*.properties"
     />
 
-    <import resource="spring/*.xml"></import>
-
 </beans>

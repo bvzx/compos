@@ -103,10 +103,4 @@ public class Https {
         return stringBuffer.toString();
     }
 
-
-    public static void main(String [] args) throws IOException {
-        Logs.log(Https.getInstance().doGet("http://www.baidu.com","utf-8"));
-        Logs.log(Https.getInstance().doGet("http://www.baidu.com","utf-8"));
-    }
-
 }

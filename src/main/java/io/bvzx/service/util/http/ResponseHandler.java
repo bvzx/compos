@@ -14,6 +14,6 @@ import org.apache.http.HttpResponse;
 public interface ResponseHandler {
 
 
-   void handleResp(HttpResponse resp);
+   void handleResponse(HttpResponse resp);
 
 }
