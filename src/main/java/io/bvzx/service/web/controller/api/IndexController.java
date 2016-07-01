@@ -20,7 +20,7 @@ public class IndexController {
 
 
     @RequestMapping("/welcome")
-    public String index(){
+    public ModelAndView index(){
         ModelAndView modelAndView=new ModelAndView("welcome");
         Person me=new Person();
         me.setAge(12);
@@ -31,7 +31,7 @@ public class IndexController {
         me.setUserName("bvzx");
         me.setWeight(130);
         modelAndView.addObject("me",me);
-        return "welcome";
+        return modelAndView;
     }
 
 }

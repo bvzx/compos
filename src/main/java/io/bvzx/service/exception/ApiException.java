@@ -9,23 +9,23 @@ package io.bvzx.service.exception;
  * @date 2016年07月01日 14:08
  * @Copyright (c) 2015-2020 by caitu99
  */
-public class ApiException extends RuntimeException  {
+public class ApiException  extends RuntimeException  {
 
     private static final long serialVersionUID = -3643000772356018114L;
 
     private int code;
     private String messge;
-    private String data;
+    private Object data;
 
 
     public ApiException(int code, String messge) {
         super(messge);
         this.code = code;
         this.messge = messge;
-        this.data="";
+        this.data=null;
     }
 
-    public ApiException(int code, String messge, String data) {
+    public ApiException(int code, String messge, Object data) {
         super(messge);
         this.code = code;
         this.messge = messge;
@@ -48,11 +48,11 @@ public class ApiException extends RuntimeException  {
         this.messge = messge;
     }
 
-    public String getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Object data) {
         this.data = data;
     }
 }

@@ -1,6 +1,8 @@
 package base;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -14,6 +16,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @Copyright (c) 2015-2020 by caitu99
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring.xml")
+@ContextConfiguration(locations = "classpath:applicationContext.xml")
+@ActiveProfiles("dev")
 public abstract class SpringTest {
+    @Test
+    public abstract void measure();
 }

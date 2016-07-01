@@ -9,7 +9,9 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="io.bvzx.service"/>
+    <context:component-scan base-package="io.bvzx.service">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
     <bean id="appName" class="java.lang.String" scope="singleton"
           c:original="wugaoda"
@@ -19,6 +21,6 @@
           p:locations="classpath:properties/*.properties"
     />
 
-    <import resource="spring/*.xml"/>
+    <import resource="spring/*.xml"></import>
 
 </beans>

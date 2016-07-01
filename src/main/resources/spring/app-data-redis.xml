@@ -17,12 +17,14 @@
           p:port="${redis.port}"
     />
 
+    <bean id="StringRedisSerializer" class="org.springframework.data.redis.serializer.StringRedisSerializer" scope="prototype"/>
+
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
           p:connectionFactory-ref="jedisConnectionFactory"
-          p:keySerializer="org.springframework.data.redis.serializer.StringRedisSerializer"
-          p:valueSerializer="org.springframework.data.redis.serializer.StringRedisSerializer"
-          p:hashKeySerializer="org.springframework.data.redis.serializer.StringRedisSerializer"
-          p:hashValueSerializer="org.springframework.data.redis.serializer.StringRedisSerializer"
+          p:keySerializer-ref="StringRedisSerializer"
+          p:valueSerializer-ref="StringRedisSerializer"
+          p:hashKeySerializer-ref="StringRedisSerializer"
+          p:hashValueSerializer-ref="StringRedisSerializer"
     />
 
 </beans>

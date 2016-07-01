@@ -17,4 +17,8 @@ public class AppContextTest extends SpringTest{
         LogUtils.println(appContext.springcontext.getBean("appName").toString());
     }
 
+    @Override
+    public void measure() {
+
+    }
 }

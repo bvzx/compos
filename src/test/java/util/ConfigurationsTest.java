@@ -22,4 +22,8 @@ public class ConfigurationsTest extends SpringTest {
         LogUtils.println(Configurations.getValue(null,"0"));
     }
 
+    @Override
+    public void measure() {
+
+    }
 }

@@ -27,4 +27,8 @@ public class DigestsTest extends SpringTest {
         LogUtils.println(Digests.SHA1("1234567"));
     }
 
+    @Override
+    public void measure() {
+
+    }
 }
