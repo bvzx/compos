@@ -1,3 +1,5 @@
+package util;
+
 import base.SpringTest;
 import io.bvzx.service.util.encrypt.Digests;
 import org.junit.Test;

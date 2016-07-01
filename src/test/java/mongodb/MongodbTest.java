@@ -1,3 +1,5 @@
+package mongodb;
+
 import com.alibaba.fastjson.JSON;
 import io.bvzx.service.mongdb.domain.MatchComment;
 import io.bvzx.service.util.NosqlManager;
