@@ -2,7 +2,6 @@ package mongodb;
 
 import com.alibaba.fastjson.JSON;
 import io.bvzx.service.mongdb.domain.MatchComment;
-import io.bvzx.service.util.NosqlManager;
 import io.bvzx.service.web.domain.Carmen;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -79,20 +78,6 @@ public class MongodbTest {
         redisTemplate.opsForValue().set("carman:api:method:mapping:2", JSON.toJSONString(carmen));
     }
 
-
-    @Test
-    public void nosqlMangerTest(){
-        NosqlManager nosqlManager=NosqlManager.createRedis();
-        NosqlManager nosqlManager1=NosqlManager.createMongoDB();
-        NosqlManager nosqlManager2=NosqlManager.createRedis();
-        NosqlManager nosqlManager3=NosqlManager.createRedis();
-        NosqlManager nosqlManager4=NosqlManager.createRedis();
-        NosqlManager nosqlManager5=NosqlManager.createRedis();
-        NosqlManager nosqlManager6=NosqlManager.createRedis();
-        NosqlManager nosqlManager7=NosqlManager.createRedis();
-        NosqlManager nosqlManager8=NosqlManager.createRedis();
-        System.out.println(nosqlManager.getNosqlManagerCount());
-    }
 
     @Test
     public void bwanwrapper(){

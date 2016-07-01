@@ -1,7 +1,7 @@
 package util;
 
 import base.SpringTest;
-import io.bvzx.service.util.Configurations;
+import io.bvzx.service.util.app.Configurations;
 import org.junit.Test;
 
 /**
