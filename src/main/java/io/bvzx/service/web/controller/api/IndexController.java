@@ -1,9 +1,14 @@
 package io.bvzx.service.web.controller.api;
 
+import io.bvzx.service.AppConfig;
+import io.bvzx.service.base.BaseController;
 import io.bvzx.service.web.controller.vo.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -16,8 +21,11 @@ import org.springframework.web.servlet.ModelAndView;
  * @Copyright (c) 2015-2020 by caitu99
  */
 @Controller
-public class IndexController {
+public class IndexController extends BaseController {
 
+
+    @Autowired
+    AppConfig appConfig;
 
     @RequestMapping("/welcome")
     public ModelAndView index(){
@@ -32,6 +40,12 @@ public class IndexController {
         me.setWeight(130);
         modelAndView.addObject("me",me);
         return modelAndView;
+    }
+
+    @RequestMapping("/{path}")
+    @ResponseBody
+    public String appearAppConfig(@PathVariable("path") String path) throws NoSuchFieldException, IllegalAccessException {
+        return appConfig.getValue(path);
     }
 
 }

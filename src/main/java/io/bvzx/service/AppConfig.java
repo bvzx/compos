@@ -1,8 +1,9 @@
 package io.bvzx.service;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import java.lang.reflect.Field;
 
 /**
  * todo
@@ -17,21 +18,27 @@ import org.springframework.stereotype.Component;
 public class AppConfig {
 
     @Value("${app.version}")
-    public  String appVersion;
+    public String appVersion;
 
     @Value("${env}")
-    public  Integer env;
+    public Integer env;
 
     @Value("${is.dev.mode}")
-    public  Boolean isDevMode;
+    public Boolean isDevMode;
 
     @Value("${is.test.mode}")
-    public  Boolean isTestMode;
+    public Boolean isTestMode;
 
     @Value("${is.product.mode}")
-    public  Boolean isPrdMode;
+    public Boolean isPrdMode;
 
     @Value("${ssl.url}")
-    public  String sslUrl;
+    public String sslUrl;
+
+    public String getValue(String fieldStr) throws NoSuchFieldException, IllegalAccessException {
+        Field f = this.getClass().getDeclaredField(fieldStr);
+        f.setAccessible(true);
+        return f.get(this).toString();
+    }
 
 }
