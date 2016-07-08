@@ -23,6 +23,7 @@ public class Configurations {
 
     public static final Properties APP_CONFIG=new Properties();
 
+    //Test costomer defined
     public static final String[] propPaths={
             "log4j.properties"
     };

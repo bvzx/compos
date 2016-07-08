@@ -8,6 +8,4 @@ public class RedisKey {
 
     public static final String USER_ACCOUNT_INFO="user:account:info:token:%s";
 
-
-
 }

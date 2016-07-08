@@ -1,10 +1,13 @@
 package base;
 
+import org.apache.zookeeper.KeeperException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.io.IOException;
 
 /**
  * todo
@@ -20,5 +23,5 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ActiveProfiles("dev")
 public abstract class SpringTest {
     @Test
-    public abstract void measure();
+    public abstract void measure() throws IOException, KeeperException, InterruptedException;
 }

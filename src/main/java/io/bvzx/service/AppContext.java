@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class AppContext implements ApplicationContextAware {
 
-    public static ApplicationContext springcontext;
+    public static ApplicationContext springContext;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         if (applicationContext==null){
             throw new IllegalArgumentException("Please configure in the spring xml");
         }
-        this.springcontext=applicationContext;
+        this.springContext =applicationContext;
     }
 
     /**
@@ -30,7 +30,7 @@ public class AppContext implements ApplicationContextAware {
      * @return
      */
     public static <T> T getBean(String name, Class<T> requiredType){
-        return springcontext.getBean(name,requiredType);
+        return springContext.getBean(name,requiredType);
     }
 
 
