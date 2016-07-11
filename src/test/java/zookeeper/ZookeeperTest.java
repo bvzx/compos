@@ -2,7 +2,9 @@ package zookeeper;
 
 import base.SpringTest;
 import org.apache.zookeeper.*;
+import org.apache.zookeeper.data.ACL;
 import org.junit.Test;
+import util.LogUtils;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -25,8 +27,9 @@ public class ZookeeperTest  implements Watcher {
 
     @Test
     public void measure() throws IOException, KeeperException, InterruptedException {
-        zooKeeper=new ZooKeeper("127.0.0.1",SESSION_TIME,this);
-        zooKeeper.create("/bvzx","wugaoda".getBytes("UTF-8"),null, CreateMode.PERSISTENT);
+        zooKeeper=new ZooKeeper("127.0.0.1:2181",SESSION_TIME,this);
+        String newNodeResult=zooKeeper.create("/bvzx1","wugaoda".getBytes("UTF-8"), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+
     }
 
     @Override
