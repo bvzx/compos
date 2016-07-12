@@ -14,7 +14,7 @@ public class AppContextTest extends SpringTest{
 
     @Test
     public void ApplicationContextIsValidTest(){
-        LogUtils.println(appContext.springContext.getBean("appName").toString());
+        LogUtils.println(appContext.getBean("appName",String.class));
     }
 
     @Override
