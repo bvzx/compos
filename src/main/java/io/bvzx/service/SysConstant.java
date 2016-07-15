@@ -11,7 +11,10 @@ package io.bvzx.service;
  */
 public class SysConstant {
 
+    //success message
     public static final String SUCCESS = "success";
+    public static final String SUCCESS_STATUS_CODE = "0";
     public static final String FAILURE = "failure";
+    public static final String FAILURE_STATUS_CODE = "-1";
 
 }

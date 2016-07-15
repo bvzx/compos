@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
  *
  * @author wugaoda
  * @Description: (类职责详细描述, 可空)
- * @ClassName: WinningRsult
+ * @ClassName: AppConfig
  * @date 2016年06月30日 10:57
  * @Copyright (c) 2015-2020 by caitu99
  */
@@ -34,11 +34,5 @@ public class AppConfig {
 
     @Value("${ssl.url}")
     public String sslUrl;
-
-    public String getValue(String fieldStr) throws NoSuchFieldException, IllegalAccessException {
-        Field f = this.getClass().getDeclaredField(fieldStr);
-        f.setAccessible(true);
-        return f.get(this).toString();
-    }
 
 }
