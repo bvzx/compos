@@ -19,9 +19,9 @@ import java.io.IOException;
  * @Copyright (c) 2015-2020 by caitu99
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring/app-bean.xml")
+@ContextConfiguration(locations = "classpath:spring/*.xml")
 @ActiveProfiles("dev")
 public abstract class SpringTest {
     @Test
-    public abstract void measure() throws IOException, KeeperException, InterruptedException;
+    public abstract void measure() ;
 }

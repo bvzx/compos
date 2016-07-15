@@ -35,4 +35,10 @@ public class AppConfig {
     @Value("${ssl.url}")
     public String sslUrl;
 
+    public String getValue(String fieldStr) throws NoSuchFieldException, IllegalAccessException {
+        Field f = this.getClass().getDeclaredField(fieldStr);
+        f.setAccessible(true);
+        return f.get(this).toString();
+    }
+
 }
