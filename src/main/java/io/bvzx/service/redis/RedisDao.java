@@ -1,5 +1,12 @@
 package io.bvzx.service.redis;
 
+import com.sun.corba.se.spi.ior.ObjectKey;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
 /**
  * todo
  *
@@ -9,7 +16,32 @@ package io.bvzx.service.redis;
  * @date 2016年06月30日 11:26
  * @Copyright (c) 2015-2020 by caitu99
  */
-public interface RedisDao {
+ interface RedisDao {
+    
+    
+     void delete(Object key);
+
+     void delete(Collection keys);
+
+     Boolean expire(Object key, long timeout, TimeUnit unit);
+
+    Boolean batchExpire(Collection keys,long timeout,TimeUnit unit);
+
+     Boolean hasKey(Object key);
+
+     void rename(Object oldKey, Object newKey);
+
+    Object setOpsString(Object key,Object value);
+
+    Object getOpsString(Object key);
+
+    <T> void setOpsList(Object key, List<T> values);
+
+    <T> List<T> getOpsList(Object key);
+
+    <K,V> void setOpsHash(Object key, Map<K,V> values);
+
+    Object getOpsHash(Object key);
 
 
 }
