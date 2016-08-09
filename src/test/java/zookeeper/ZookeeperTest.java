@@ -1,12 +1,8 @@
 package zookeeper;
 
-import base.SpringTest;
 import org.apache.zookeeper.*;
-import org.apache.zookeeper.data.ACL;
 import org.junit.Test;
-import util.LogUtils;
 
-import javax.swing.*;
 import java.io.IOException;
 
 /**
@@ -34,6 +30,6 @@ public class ZookeeperTest  implements Watcher {
 
     @Override
     public void process(WatchedEvent watchedEvent) {
-
+        System.out.println("1");
     }
 }

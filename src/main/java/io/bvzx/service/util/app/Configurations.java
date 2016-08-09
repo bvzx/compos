@@ -26,6 +26,7 @@ public class Configurations {
     //Test costomer defined
     public static final String[] propPaths={
             "log4j.properties"
+            //input
     };
 
     public static final String DEFAULT_VALUE="";
