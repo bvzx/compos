@@ -1,4 +1,4 @@
-package io.bvzx.service;
+package io.bvzx;
 
 /**
  * redis缓存 key配置类

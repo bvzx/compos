@@ -1,4 +1,4 @@
-package io.bvzx.service.blender;
+package io.bvzx.blender;
 
 import java.util.Objects;
 import java.util.concurrent.Executor;

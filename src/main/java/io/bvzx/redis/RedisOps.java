@@ -1,4 +1,4 @@
-package io.bvzx.service.redis;
+package io.bvzx.redis;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

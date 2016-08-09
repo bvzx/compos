@@ -1,4 +1,4 @@
-package io.bvzx.service.web.domain;
+package io.bvzx.web.domain;
 
 /**
  * todo

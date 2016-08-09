@@ -1,4 +1,4 @@
-package io.bvzx.service;
+package io.bvzx;
 
 /**
  * todo

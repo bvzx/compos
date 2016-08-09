@@ -1,15 +1,12 @@
-package io.bvzx.service.web.controller.api;
+package io.bvzx.web.controller.api;
 
-import io.bvzx.service.AppConfig;
-import io.bvzx.service.base.BaseController;
-import io.bvzx.service.web.controller.vo.Person;
+import io.bvzx.AppConfig;
+import io.bvzx.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * todo

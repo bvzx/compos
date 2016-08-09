@@ -1,4 +1,4 @@
-package io.bvzx.service.util.http;
+package io.bvzx.util.http;
 
 import org.apache.http.HttpResponse;
 

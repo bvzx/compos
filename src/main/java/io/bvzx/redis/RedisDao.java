@@ -1,4 +1,4 @@
-package io.bvzx.service.redis;
+package io.bvzx.redis;
 
 import com.sun.corba.se.spi.ior.ObjectKey;
 

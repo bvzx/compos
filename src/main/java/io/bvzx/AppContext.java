@@ -1,4 +1,4 @@
-package io.bvzx.service;
+package io.bvzx;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

@@ -1,4 +1,4 @@
-package io.bvzx.service.web.controller.vo;
+package io.bvzx.web.controller.vo;
 
 import java.util.Optional;
 

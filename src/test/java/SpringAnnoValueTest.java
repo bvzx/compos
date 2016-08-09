@@ -1,7 +1,7 @@
 import base.SpringTest;
-import io.bvzx.service.AppConfig;
-import io.bvzx.service.AppContext;
-import io.bvzx.service.util.Logs;
+import io.bvzx.AppConfig;
+import io.bvzx.AppContext;
+import io.bvzx.util.Logs;
 
 /**
  * Created by 73992 on 2016/7/1.

@@ -1,4 +1,4 @@
-package io.bvzx.service.mongdb;
+package io.bvzx.mongdb;
 
 import com.mongodb.CommandResult;
 import com.mongodb.WriteResult;

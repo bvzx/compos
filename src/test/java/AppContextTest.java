@@ -1,5 +1,5 @@
 import base.SpringTest;
-import io.bvzx.service.AppContext;
+import io.bvzx.AppContext;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import util.LogUtils;

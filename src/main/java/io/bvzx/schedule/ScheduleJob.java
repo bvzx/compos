@@ -1,4 +1,4 @@
-package io.bvzx.service.schedule;
+package io.bvzx.schedule;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

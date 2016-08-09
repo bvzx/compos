@@ -1,6 +1,5 @@
-package io.bvzx.service.util.http;
+package io.bvzx.util.http;
 
-import io.bvzx.service.util.Logs;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;

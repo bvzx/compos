@@ -1,4 +1,4 @@
-package io.bvzx.service.util.app;
+package io.bvzx.util.app;
 
 import com.google.common.base.Strings;
 import com.sun.javafx.geom.IllegalPathStateException;

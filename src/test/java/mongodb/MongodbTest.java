@@ -1,8 +1,8 @@
 package mongodb;
 
 import com.alibaba.fastjson.JSON;
-import io.bvzx.service.mongdb.domain.MatchComment;
-import io.bvzx.service.web.domain.Carmen;
+import io.bvzx.mongdb.domain.MatchComment;
+import io.bvzx.web.domain.Carmen;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.BeanWrapper;

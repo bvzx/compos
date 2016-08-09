@@ -1,4 +1,4 @@
 /**
  * Created by lss on 16-8-9.
  */
-package io.bvzx.service.web;
+package io.bvzx.web;

@@ -1,8 +1,8 @@
 package redis;
 
 import base.SpringTest;
-import io.bvzx.service.RedisKey;
-import io.bvzx.service.redis.RedisOps;
+import io.bvzx.RedisKey;
+import io.bvzx.redis.RedisOps;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**

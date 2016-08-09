@@ -1,4 +1,4 @@
-package io.bvzx.service.util.encrypt;
+package io.bvzx.util.encrypt;
 
 import com.google.common.base.Strings;
 

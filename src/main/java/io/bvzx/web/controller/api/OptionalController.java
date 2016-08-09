@@ -1,16 +1,13 @@
-package io.bvzx.service.web.controller.api;
+package io.bvzx.web.controller.api;
 
-import io.bvzx.service.base.BaseController;
-import io.bvzx.service.web.controller.vo.Person;
+import io.bvzx.base.BaseController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.Optional;
 
 /**
  * Created by lss on 16-7-28.
  */
-public class OptionalController extends BaseController{
+public class OptionalController extends BaseController {
 
 
 

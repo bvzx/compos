@@ -1,4 +1,4 @@
-package io.bvzx.service.exception;
+package io.bvzx.exception;
 
 /**
  * todo
