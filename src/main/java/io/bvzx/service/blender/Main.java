@@ -16,10 +16,6 @@ public class Main {
 
 
     public static void  main(String [] args){
-
         executor.execute(System.out::println);
-
-
-
     }
 }
