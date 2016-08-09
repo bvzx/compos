@@ -1,4 +1,4 @@
-package io.bvzx.service.base;
+package io.bvzx.service.schedule;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ public class ScheduleJob {
 
 
 
-    @Scheduled(cron = "0 */1 * * * ?")
+    @Scheduled(cron = "*/1 * * * * ?")
     public void test(){
         System.out.println("cron  !!!!~~~~");
     }

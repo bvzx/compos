@@ -27,7 +27,7 @@ public class IndexController extends BaseController {
     @Autowired
     AppConfig appConfig;
 
-    @RequestMapping("/welcome")
+    /*@RequestMapping("/welcome")
     public ModelAndView index(){
         ModelAndView modelAndView=new ModelAndView("welcome");
         Person me=new Person();
@@ -40,7 +40,7 @@ public class IndexController extends BaseController {
         me.setWeight(130);
         modelAndView.addObject("me",me);
         return modelAndView;
-    }
+    }*/
 
     @RequestMapping("/{path}")
     @ResponseBody
