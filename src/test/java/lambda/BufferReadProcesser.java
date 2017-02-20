@@ -7,5 +7,7 @@ import java.io.BufferedReader;
  */
 @FunctionalInterface
 public interface BufferReadProcesser {
+
     String process(BufferedReader br) throws Exception;
+
 }
