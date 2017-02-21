@@ -67,11 +67,22 @@ public class LambdaTest  {
 
         Predicate<Transaction> p1=(x) ->x.getId().equals(1);
 
+        Predicate<Transaction> p2=p1.negate();
+        Predicate<Transaction> p3=p2.and(p1);
+
+        boolean gg=p3.test(new Transaction(1,2d,"3"));
+
+        System.out.println(gg);
+
+        Function<Integer, String> f = x -> x + 1+"";
+        Function<String, Integer> g = x -> Integer.parseInt(x) * 2;
+        Function<Integer, Integer> h = f.andThen(g);
+        int result1 = h.apply(1);
+
+
         list.stream().map(f1).limit(5).forEach(System.out::println);
 
-        list.stream().max(Comparator.comparing(Transaction::getId));
-
-        list.stream().min(Comparator.comparing(Transaction::getId));
+        list.sort(Comparator.comparing(Transaction::getId));
 
         double a=list.stream()
                 .filter((transaction -> transaction.getId() > 3))
